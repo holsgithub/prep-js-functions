@@ -1,17 +1,16 @@
 /**
- *  Below are some specifications for Functions to be built.
- *
- *  #1
  *  Declare Two Variables
  *     - `a` random Number value
  *     - `b` random Number value
- *
+ *ar a = 1;
+ var b = 2;
  *  We will be using both of these variables to pass as `parameters` to the
  *  following functions that we will write. Pay close attention to the other
  *  variable names you will create as they will become input to _other_
  *  functions.
  */
-
+var a = 1
+var b = 2
 
 /**
  *  #2
@@ -20,7 +19,12 @@
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
+function add (a,b){
+	return a+b;
+}
 
+var sum = add(1,2);
+console.log(sum);
 
 /**
  *  #3
@@ -29,8 +33,11 @@
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
-
-
+function subtract (b,a){
+	return b-a;
+}
+var difference = subtract(2,1);
+console.log(difference);
 /**
  *  #4
  *  Function - multiply
@@ -38,6 +45,11 @@
  *  This function returns the result of multiplying `b` by `a`.
  *  Store this value in a variable named `product`
  */
+function multiplying (b,a){
+	return b*a;
+}
+var product = multiplying(2,1);
+console.log(product);
 
 
 /**
@@ -49,8 +61,10 @@
  *  "My football team lost X times this week", where `X` is the
  *  value stored in `difference`.
  */
-
-
+function checkDifference (){
+	return "My football team lost " + difference + "times this week";
+}
+console.log(checkDifference());
 /**
  *  #6
  *  Function - checkSum
@@ -114,8 +128,16 @@
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
+function createFullName(firstName,lastName) {
+	var results = "";
 
+	results = firstName + " " + lastName;
 
+	return results;
+}
+var myName = createFullName("Holly", "Cabacungan")
+
+console.log(myName);
 /**
  *  #11
  *  Function - verifyDrinkingAge
@@ -130,8 +152,17 @@
  *  **Call this function and pass in a number value.
  *  Store the return value to a variable named** `canDrinkBeer`
  */
+function verifyDrinkingAge(age){
+	var result;
 
+	result = age >= 21;
 
+	return result;
+}
+
+var canDrinkBeer = verifyDrinkingAge(25);
+
+console.log("Can I drink beer?: " + canDrinkBeer);
 /**
  *  #12
  *  Function - throwParty
@@ -142,7 +173,16 @@
  *  should be "This Party will have an open bar".
  */
 
+function throwParty(Barstatus){
+var result;
+	if(Barstatus){
+		console.log("this party will have an open bar");
+	} else{
+		console.log("The Party will have tons of Cake");
+	}
+}
 
+throwParty(canDrinkBeer);
 /**
  *  #13
  *  Function - eatFood
@@ -175,4 +215,29 @@
  *  the message will be `"Bacon Pancakes, makin' Bacon Pancakes..."`
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
+
+function whatISayAtParties(drinkingStatus,howmany){
+// 	if (age <=21) 
+// 		console.log("chug");
+// 	else(
+// 		console.log("I am not 21"))
+// }
+
+// for (var i = 0; i <= 5; i++){
+// console.log("Hi there");
+// }
+if (drinkingStatus){
+	for(var i = 0; i < howmany; i++){
+		console.log("Chug");
+	}
+} else {
+	for (var i = 0; i < howmany; i++){
+		console.log("No! I am under 21!!!!");
+	}
+
+ }
+}
+var howmany = 10;
+canDrinkBeer = true;	
+whatISayAtParties(canDrinkBeer,howmany);
 
