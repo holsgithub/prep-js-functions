@@ -74,8 +74,11 @@ console.log(checkDifference());
  *  "I CAN ADDZ X NUMBERS"  where `X` is the value
  *  stored in the variable `sum`.
  */
-
-
+function checkSum(){
+	return "I CAN ADDZ" + sum + "NUMBERS";
+}
+var x = sum
+console.log(checkSum());
 /**
  *  #7
  *  Function - checkProduct
@@ -84,8 +87,12 @@ console.log(checkDifference());
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-
-
+function checkProduct(dog,cat){
+	return dog * cat;
+}
+checkProduct();
+var result = checkProduct ( product, difference);
+console.log (result);
 /**
  *  #8
  *  Function - addThenSubtract
@@ -99,8 +106,11 @@ console.log(checkDifference());
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
-
-
+function addThenSubtract(n1,n2,n3){
+	return 1 + 2 + 3
+}
+var result = (3 + 4 - 5);
+console.log(result);
 /**
  *  #9
  *  Function - addThenMultiply
@@ -112,8 +122,11 @@ console.log(checkDifference());
  *
  *  Store the return of this function to a variable named `howMany`
  */
-
-
+function addThenMultiply(bird,dog,turtle){
+	return "howMany"
+}
+var result = (2 + 3 * 5);
+console.log(result);
 /**
  *  #10
  *  Function - createFullName
@@ -202,8 +215,15 @@ throwParty(canDrinkBeer);
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
+function eatFood(firstName,lastName,food){
+var myname = createFullName (firstName,lastName);
+return myname + "loves to eat" + food;
+}
+
+var myFavoritefood = eatFood("firstName","lastName","food");
 
 
+console.log(myFavoritefood)
 /**
  *  #14
  *  Function - repeater
